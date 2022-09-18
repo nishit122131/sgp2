@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="images/d3linklogo2.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "viewport" content="width = device-width , initial-scale=1.0" >
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <title>All Products - D3 Fashion Hub</title>
+    <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<body>
+
+
+
+    <div class="containar">
+       <div class="navbar">
+          <div class="logo">
+           <a href="index.html"> <img src="khali2.png" width="100px"></a>
+          </div>
+         
+        <nav>
+            <ul id="MenuItems">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="account.html">Account</a></li>
+            </ul>
+        </nav>
+  
+       <a href="cart.html"> <img src="images/cart.png" width="30px" height="30px"></a>
+        <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+    </div>
+    
+</div>
+
+<!-- ----------------Account Page-------- -->
+<!-- <div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/image1.png" width="100%">
+            </div>
+            <div class="col-2">
+               <div class="form-container">
+                   <div class="form-btn">
+                       <span onclick="login()">Login</span>
+                       <span onclick="register()">Register</span>
+                        <hr id="Indicator">
+
+                   </div>
+
+                   <form id="LoginForm"  method="POST" data-netlify="true">
+                       <input type="text" placeholder="Username">
+                       <input type="password" placeholder="password">
+                       <button type="submit" class="btn">Login</button>
+                       <a href="">Forgot Password ?</a>
+                   </form>
+
+                   <form id="RegForm"  method="POST" data-netlify="true">
+                       <input type="text" placeholder="Username">
+                       <input type="email" placeholder="Email">
+                       <input type="password" placeholder="password">
+                       <button type="submit" class="btn">Register</button>
+                   </form>
+               </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+<!-- ----------------Account Page-------- -->
+
+<!-- ----------------Account Page-------- -->
+
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/image1.png" width="100%">
+            </div>
+            <div class="col-2">
+               <div class="form-container">
+                <h5> <b> Welcome to D3-Fashion-Hub !!! <br>
+                  we hope you are enjoying our services </b>  </h5>
+
+                  <div data-netlify-identity-menu class="btn"></div>
+
+  
+                 <div data-netlify-identity-button>.</div>
+               </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    // Open the modal
+netlifyIdentity.open();
+
+// Get the current user:
+// Available after on('init') is invoked
+const user = netlifyIdentity.currentUser();
+
+// Bind to events
+netlifyIdentity.on('init', user => console.log('init', user));
+netlifyIdentity.on('login', user => console.log('login', user));
+netlifyIdentity.on('logout', () => console.log('Logged out'));
+netlifyIdentity.on('error', err => console.error('Error', err));
+netlifyIdentity.on('open', () => console.log('Widget opened'));
+netlifyIdentity.on('close', () => console.log('Widget closed'));
+
+// Unbind from events
+netlifyIdentity.off('login'); // to unbind all registered handlers
+netlifyIdentity.off('login', handler); // to unbind a single handler
+
+// Close the modal
+netlifyIdentity.close();
+
+// Log out the user
+netlifyIdentity.logout();
+
+// Refresh the user's JWT
+// Call in on('login') handler to ensure token refreshed after it expires (1hr)  
+// Note: this method returns a promise.
+netlifyIdentity.refresh().then((jwt)=>console.log(jwt))
+
+// Change language
+netlifyIdentity.setLocale('en');
+
+const netlifyIdentity = require('netlify-identity-widget');
+
+netlifyIdentity.init({
+  container: '#netlify-modal', // defaults to document.body
+  locale: 'en' // defaults to 'en'
+});
+
+netlifyIdentity.open(); // open the modal
+netlifyIdentity.open('login'); // open the modal to the login tab
+netlifyIdentity.open('signup'); // open the modal to the signup tab
+
+netlifyIdentity.on('init', user => console.log('init', user));
+netlifyIdentity.on('login', user => console.log('login', user));
+netlifyIdentity.on('logout', () => console.log('Logged out'));
+netlifyIdentity.on('error', err => console.error('Error', err));
+netlifyIdentity.on('open', () => console.log('Widget opened'));
+netlifyIdentity.on('close', () => console.log('Widget closed'));
+
+// Unbind from events
+netlifyIdentity.off('login'); // to unbind all registered handlers
+netlifyIdentity.off('login', handler); // to unbind a single handler
+
+// Close the modal
+netlifyIdentity.close();
+
+// Log out the user
+netlifyIdentity.logout();
+
+// refresh the user's JWT
+// Note: this method returns a promise.
+netlifyIdentity.refresh().then((jwt)=>console.log(jwt))
+
+// Change language
+netlifyIdentity.setLocale('en');
+
+// Access the underlying GoTrue JS client.
+// Note that doing things directly through the GoTrue client brings a risk of getting out of
+// sync between your state and the widget’s state.
+netlifyIdentity.gotrue;
+
+
+  container: '#some-query-selector'; // container to attach to
+  APIUrl: 'https://www.example.com/.netlify/functions/identity'; // Absolute url to endpoint.  ONLY USE IN SPECIAL CASES!
+  namePlaceholder: 'some-placeholder-for-Name'; // custom placeholder for name input form
+  locale: 'en'; // language code for translations - available: en, fr, es, pt, hu, pl, cs, sk - default to en
+
+
+</script>
+
+<!-- ----------footer-------- -->
+
+<section class="footer">
+    <h4>About Us</h4>
+    <p>In recognition of successful shop in market, the team of D3FashionHub is evolving to meet the <br> changing customers need by modifying and delivering the new products from all over the world.</p>
+    <div class="icons">
+      <a href="https://www.facebook.com/patel.devan.106">  <i class="fa fa-facebook"></i></a>
+      <a href="https://wa.me/919106175223?text=Hi%20i%20want%20to%20buy%20from%20your%20shop">  <i class="fa fa-whatsapp"></i></a>
+      <a href="http://instagram.com/_.devan_.27">  <i class="fa fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/devan-patel-736235209">   <i class="fa fa-linkedin"></i></a>
+    </div>
+    <hr>
+    <p>Copyright &copy; 2021 - D3 Fashion Hub</p>
+</section>
+
+<!-- ----------java Script for toggle menu------ -->
+
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle(){
+       if(MenuItems.style.maxHeight == "0px")
+       {
+        MenuItems.style.maxHeight = "200px"
+       }
+       else
+       {
+        MenuItems.style.maxHeight = "0px"    
+       }
+    }
+</script>
+
+<!-- ---------Java Script For togglr Form-------- -->
+
+<script>
+var LoginForm = document.getElementById("LoginForm");
+var RegForm = document.getElementById("RegForm");
+var Indicator = document.getElementById("Indicator");
+
+function register()
+{
+    RegForm.style.transform = "translateX(0px)";
+    LoginForm.style.transform = "translateX(0px)";
+    Indicator.style.transform = "translateX(100px)";
+}
+function login()
+{
+    RegForm.style.transform = "translateX(300px)";
+    LoginForm.style.transform = "translateX(300px)";
+    Indicator.style.transform = "translateX(0px)";
+}
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

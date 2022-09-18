@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="images/d3linklogo2.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "viewport" content="width = device-width , initial-scale=1.0" >
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <title>All Products - D3 Fashion Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<body>
+
+
+
+    <div class="containar">
+       <div class="navbar">
+          <div class="logo">
+           <a href="index.html"> <img src="khali2.png" width="100px"></a>
+          </div>
+         
+        <nav>
+            <ul id="MenuItems">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="account.html">Account</a></li>
+            </ul>
+        </nav>
+  
+       <a href="cart.html"> <img src="images/cart.png" width="30px" height="30px"></a>
+        <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+    </div>
+    
+</div>
+<!-- --------About us--- -->
+
+ <div class="aboutus">
+        <h1><br><br><br> About Us</h1>
+</div>
+
+
+<!-- --------about us content-------- -->
+<section class="about-us">
+    <div class="row">
+        <div class="about-col">
+            <h1>We are the best Fashion Dealer</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit consequatur animi odio illum!</p>
+            <a href="products.html" class="btn">Explore Now</a>
+        </div>
+        <div class="about-col">
+            <img src="images/about.jpg" >
+        </div>
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ----------footer-------- -->
+
+<section class="footer">
+    <h4>About Us</h4>
+    <p>In recognition of successful shop in market, the team of D3FashionHub is evolving to meet the <br> changing customers need by modifying and delivering the new products from all over the world.</p>
+    <div class="icons">
+      <a href="https://www.facebook.com/patel.devan.106">  <i class="fa fa-facebook"></i></a>
+      <a href="https://wa.me/919106175223?text=Hi%20i%20want%20to%20buy%20from%20your%20shop">  <i class="fa fa-whatsapp"></i></a>
+      <a href="http://instagram.com/_.devan_.27">  <i class="fa fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/devan-patel-736235209">   <i class="fa fa-linkedin"></i></a>
+    </div>
+    <hr>
+    <p>Copyright &copy; 2021 - D3 Fashion Hub</p>
+</section>
+
+
+
+<!-- ----------java Script for toggle menu------ -->
+
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle(){
+       if(MenuItems.style.maxHeight == "0px")
+       {
+        MenuItems.style.maxHeight = "200px"
+       }
+       else
+       {
+        MenuItems.style.maxHeight = "0px"    
+       }
+    }
+</script>
+
+</body>
+</html>
